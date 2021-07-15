@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'GoldplayMedium';
+  src: url('./GoldplayMedium.woff') format('woff'),
+    url('./GoldplayMedium.ttf') format('truetype');
+  font-weight: lighter;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GoldplayRegular';
+  src: url('./GoldplayRegular.woff') format('woff'),
+    url('./GoldplayRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GoldplaySemiBold';
+  src: url('./GoldplaySemiBold.woff') format('woff'),
+    url('./GoldplaySemiBold.ttf') format('truetype');
+  font-weight: bolder;
+  font-style: normal;
+  font-display: swap;
+}
