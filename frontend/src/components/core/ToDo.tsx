@@ -10,7 +10,6 @@ type ToDoProps = {
 
 const ToDoContainer = styled.div<ToDo>`
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
   height: 50px;
   max-width: 580px;
@@ -37,14 +36,14 @@ const ToDoText = styled.span<ToDo>`
 `;
 
 export const ToDoComponent: FunctionComponent<ToDoProps> = ({ todo }) => {
-  const { setToDoAsDone } = useToDo();
+  const { updateToDo } = useToDo();
 
   return (
     <ToDoContainer
       {...todo}
-      onClick={() => setToDoAsDone(todo.id, !todo.isDone)}
+      onClick={() => updateToDo({ ...todo, isDone: !todo.isDone })}
     >
-      <Checkbox checked={todo.isDone} />
+      <Checkbox checked={todo.isDone} readOnly />
       <ToDoText {...todo} isDone={todo.isDone}>
         {todo.text}
       </ToDoText>

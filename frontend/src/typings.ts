@@ -1,8 +1,12 @@
+export type RawToDo = {
+  id: string,
+  text: string,
+  isDone: 0 | 1
+}
 export type ToDo = {
   id: string,
   text: string,
-  isDone: boolean,
-  createdAt: Date
+  isDone: boolean
 }
 
 export type ToDoState = {

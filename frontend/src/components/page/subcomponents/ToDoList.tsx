@@ -13,7 +13,7 @@ export const ToDoList: FunctionComponent = () => {
   return (
     <ToDoListContainer>
       {todos.map((todo) => {
-        return <ToDoComponent todo={todo} />;
+        return <ToDoComponent key={todo.id} todo={todo} />;
       })}
     </ToDoListContainer>
   );

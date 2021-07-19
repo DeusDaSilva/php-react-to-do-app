@@ -3,7 +3,7 @@ import { ToDo } from "typings"
 export enum ActionType {
   AddToDo,
   SetToDos,
-  SetToDoAsDone
+  UpdateToDo
 }
 
 type SetToDos = {
@@ -17,9 +17,8 @@ type AddToDo = {
 }
 
 type SetIsDoneOfToDo = {
-  type: ActionType.SetToDoAsDone,
-  todoId: string,
-  isDone: boolean
+  type: ActionType.UpdateToDo,
+  todo: ToDo
 }
 
 export type Actions = AddToDo | SetToDos | SetIsDoneOfToDo;

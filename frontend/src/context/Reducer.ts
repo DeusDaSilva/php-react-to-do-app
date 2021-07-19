@@ -9,10 +9,10 @@ export const todoReducer = (state: ToDoState, action: Actions): ToDoState => {
       return {
         todos: [...state.todos, action.todo]
       }
-    case ActionType.SetToDoAsDone:
+    case ActionType.UpdateToDo:
       return {
         todos: state.todos.map((todo) => {
-          return { ...todo, isDone: todo.id === action.todoId ? action.isDone : todo.isDone }
+          return (todo.id === action.todo.id) ? action.todo : todo
         })
       };
     case ActionType.SetToDos:
