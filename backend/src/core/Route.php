@@ -5,7 +5,6 @@ namespace Routing;
 class Route {
 
   public $path; 
-  public $pathParams; 
   public $method; 
   public $handler;
 
